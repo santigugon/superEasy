@@ -39,6 +39,7 @@ const superMarketGrid = document.querySelector(
 const welcomeBtn = document.querySelector(".welcome__container__btn");
 
 // VARIABLES
+
 let products = [];
 let pageLimit;
 // let cartProducts = [];
@@ -79,7 +80,10 @@ const src = {
 
 welcomeBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  console.log("Santi");
+  let searchField = document.querySelector(".search__field");
+  let cartBtn = document.querySelector(".cartbtn");
+  searchField.classList.toggle("hidden");
+  cartBtn.classList.toggle("hidden");
   gridCreator(superMarkets);
 });
 
@@ -94,8 +98,6 @@ welcomeBtn.addEventListener("click", function (e) {
 //   previousPage(productListOne, products);
 //   e.preventDefault();
 // });
-
-console.log("Welcome to super Easy");
 
 const jamon = new Product(
   42.0,
@@ -127,13 +129,9 @@ superMarketGrid.addEventListener("click", function (e) {
 
       if (!superMarkets.includes(superMarket) && superMarkets.length < 4) {
         superMarkets.push(superMarket);
-        console.log(superMarkets);
       } else {
         removeElementFromArray(superMarkets, superMarket);
-        console.log(superMarkets);
       }
-
-      // console.log(selected.classList);
     }
   }
 });
