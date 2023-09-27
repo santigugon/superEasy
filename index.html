@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link href="style.css" rel="stylesheet" />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <link rel="icon" href="./superEasyLogo.png" type="image/png"> 
-      <script type="module" src="JS/main.js"></script>
-
-      <title>PainlessSUPER!</title>
-    </head>
-    <header>
-      <div class="nav sticky">
-        <h1 class="webname">PainlessSUPER!</h1>
-
-        <form class="search">
-          <input
-            type="text"
-            class="search__field hidden"
-            placeholder="Search over 1,000,000 products..."
-          />
-        </form>
-        <div>
-          <button class="cartbtn hidden" href="cart.html">
-            <a href="cart.html"></a>
-            <i class="fa fa-shopping-cart"></i>
-          </button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="./superEasyLogo.png" type="image/png"> 
+    <script type="module" src="JS/main.js"></script>
+    
+    <title>PainlessSUPER!</title>
+  </head>
+  <header>
+    <div class="nav sticky">
+      
+      <img class="webname__img" src="./Logo-Text-sinFondo.png" alt="">
+      
+      <form class="search">
+        <input
+        type="text"
+        class="search__field hidden"
+        placeholder="Search over 1,000,000 products..."
+        />
+      </form>
+      <div>
+        <button class="cartbtn hidden" href="cart.html">
+          <a href="cart.html"></a>
+          <i class="fa fa-shopping-cart"></i>
+        </button>
       </div>
-      <div class="navfix"></div>
-    </header>
+    </div>
+    <div class="navfix"></div>
+  </header>
+  
+  <body>
+  <div class="welcome__container">
 
-    <div class="welcome__container">
+    <div class="welcome__carrousel">
+
+      <div id="image-track" data-mouse-down-at="0">
+
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+        <img class="img" src="https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png" alt="" draggable="false">
+      </div>
+
+    </div>
       <h3 class="welcome__message">
 Bienvenido al buscador primero selecciona entre 2 y 4 supermercados      </h3>
 <div class="welcome__supermarket__container">
@@ -112,8 +130,8 @@ Bienvenido al buscador primero selecciona entre 2 y 4 supermercados      </h3>
 <div class="logo__space">
   <button class="welcome__container__btn btn">CONTINUE</button>
 </div>
-</div>
 <hr></hr>
+</div>
 <div class="column-container hidden">
       <!-- <div class="column column__1 hidden">
         <div class="logo__space">

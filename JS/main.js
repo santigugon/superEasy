@@ -1,6 +1,6 @@
 // import { searchBar, searchResults } from "./searchFunctions.js";
 // import { scrapeProduct } from "./scrapeTest.js";
-
+import { carrouselSlider } from "./animations.js";
 import { Product } from "./productClass.js";
 import {
   productRender,
@@ -87,6 +87,7 @@ welcomeBtn.addEventListener("click", function (e) {
   gridCreator(superMarkets);
 });
 
+carrouselSlider();
 // nextPageBtn.addEventListener("click", function (e) {
 //   nextPage(productListOne, products);
 //   e.preventDefault();
