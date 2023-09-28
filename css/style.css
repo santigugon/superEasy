@@ -36,9 +36,42 @@ body {
   min-height: 40px;
   z-index: 999;
 }
+.welcome__header {
+  background-color: var(--color-brand--2);
+  height: 70vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  justify-items: flex-start;
+}
+.side .title {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 4vw;
+  margin: 0px 15vw;
+  width: 70vw;
+}
+.side {
+  height: 60vh;
+  width: 100%;
 
-.welcome__container {
-  margin-top: 20px;
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.welcome__image {
+  margin-top: 15px;
+  width: 50%;
+}
+#left-side {
+  background-color: var(--color-brand--1);
+  z-index: 2;
+}
+#right-side {
+  background-color: var(--color-brand--2);
 }
 
 .welcome__message {
@@ -66,10 +99,17 @@ body {
 }
 .welcome__carrousel {
   height: 40vh;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color-brand--2);
   margin: 0rem;
   overflow: hidden;
+  position: relative;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #image-track {
   display: flex;
@@ -128,7 +168,7 @@ body {
   }
 }
 .navfix {
-  height: 43px;
+  height: 40px;
 }
 .sticky {
   position: fixed;
