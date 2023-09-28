@@ -191,7 +191,7 @@ export const productRender = function (container, product, index) {
     <span class="quantity">${_quantity}</span>
     <button class="quantity__button" id="increment">+</button>
     </div>
-     <button class="product__addbtn btn" id="${superMarket}">	&plus;Agregar</button>
+     <button class="product__addbtn btn" id="${superMarket}">	&plus; Agregar</button>
      </div>
      </div>
 </div>`;
@@ -434,7 +434,9 @@ export const gridCreator = function (array) {
   columnContainer.classList.remove("hidden");
   const frColumns = array.map(() => "1fr").join(" ");
   let html = "";
-  columnContainer.style.gridTemplateColumns = frColumns;
+  console.log("length del array ", array.length);
+
+  columnContainer.style.gridTemplateColumns = `repeat(${array.length}, 1fr)`;
 
   array.forEach((superMarket, index) => {
     console.log();

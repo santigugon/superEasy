@@ -99,7 +99,7 @@ body {
   position: relative;
 }
 .relative__container {
-  height: 5vh;
+  height: 20vh;
   position: relative;
   overflow: visible;
   background-color: #080000;
@@ -239,7 +239,7 @@ body {
 }
 .column-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
   grid-template-rows: auto auto auto;
 }
 .column {
@@ -278,11 +278,12 @@ body {
   max-width: 30%;
   padding: 5px;
   margin-top: 5px;
-  background-color: green;
+  background-color: var(--color-brand--2);
   color: rgb(255, 255, 255);
 }
 .product__addbtn:hover {
-  background-color: rgb(12, 201, 201);
+  background-color: var(--color-brand--1);
+  color: #080000;
   cursor: pointer;
 }
 .product__discount {
@@ -325,6 +326,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+.subtotal .product__addbtn {
+  max-width: 100%;
+  width: 100%;
 }
 .product__details {
   width: 70%;

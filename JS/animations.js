@@ -4,6 +4,7 @@ export function headerSlider() {
   const initialtopDistance = left.getBoundingClientRect().top;
   const initialbottomDistance = left.getBoundingClientRect().bottom;
   const trackMessage = document.querySelector(".track__message");
+  const webNameImage = document.querySelector(".webname__img");
   window.onscroll = (e) => {
     const topDistance = left.getBoundingClientRect().top;
     console.log("original", initialbottomDistance, topDistance);
@@ -15,6 +16,8 @@ export function headerSlider() {
     if (width - 10 == 0) {
       trackMessage.classList.remove("hidden");
       trackMessage.classList.add("fade__down");
+      webNameImage.classList.remove("hidden");
+      webNameImage.classList.add("fade__down");
     }
   };
 }

@@ -133,8 +133,11 @@ const cartColumnDisplay = function () {
   if (localStorage.getItem("superMarkets"))
     superMarkets = JSON.parse(localStorage.getItem("superMarkets"));
   let html;
-  let container = document.querySelector(".column__container");
+  const container = document.querySelector(".column__container");
+  const columnContainer = document.querySelector(".column-container");
+  columnContainer.classList.remove("hidden");
 
+  columnContainer.style.gridTemplateColumns = `repeat(${superMarkets.length}, 1fr)`;
   for (let i = 0; i < superMarkets.length; i++) {
     html = `<div class="column column__${i + 1}" id="${superMarkets[i]}">
  
