@@ -6,12 +6,33 @@ export function carrouselSlider() {
     console.log("click");
     track.dataset.mouseDownAt = e.clientX;
   };
+
+  window.onmouseup = () => {
+    track.dataset.mouseDownAt = "0";
+    track.dataset.prevPercentage = track.dataset.percentage;
+  };
+
   window.onmousemove = (e) => {
-    console.log("click");
     if (track.dataset.mouseDownAt === "0") return;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
       maxDelta = window.innerWidth / 2;
     const percentage = (mouseDelta / maxDelta) * -100;
-    track.style.transform = `translate(${percentage}%,-50%)`;
+    let nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+    nextPercentage = Math.min(nextPercentage, 0);
+    nextPercentage = Math.max(nextPercentage, -100);
+    track.dataset.percentage = nextPercentage;
+    track.animate(
+      { transform: `translate(${nextPercentage}%,-50%)` },
+      { duration: 1200, fill: "forwards" }
+    );
+
+    for (const image of track.getElementsByClassName("img")) {
+      image.animate(
+        {
+          objectPosition: `${nextPercentage * -1}% center`,
+        },
+        { duration: 1200, fill: "forwards" }
+      );
+    }
   };
 }

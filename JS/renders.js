@@ -422,9 +422,7 @@ export const gridCreator = function (array) {
   //   sams: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sam%27s_Club_Logo_2020.svg/2560px-Sam%27s_Club_Logo_2020.svg.png",
   //   ley: "https://seeklogo.com/images/C/Casa_Ley-logo-A556B3EF68-seeklogo.com.png",
   // };
-  let welcomeContainer = document.querySelector(
-    ".welcome__supermarket__container"
-  );
+  let welcomeContainer = document.querySelector(".welcome__container");
   let welcomeBtn = document.querySelector(".welcome__container__btn");
   let welcomeMessage = document.querySelector(".welcome__message");
 
