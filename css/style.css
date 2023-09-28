@@ -109,12 +109,16 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 2vw;
   color: #ffffff;
-  display: flex;
+
   gap: 3vmin;
   position: absolute;
   left: 0%;
   top: 10%;
-  z-index: 999;
+  z-index: 5;
+}
+
+.track__message .icon {
+  transform: translateX(100%);
 }
 
 .fade__down {
@@ -153,6 +157,8 @@ body {
   top: 32%;
   transform: translate(0%, -50%);
   overflow: hidden;
+
+  user-select: none;
 }
 .welcome__carrousel .track__message {
   display: flex;

@@ -14,7 +14,7 @@
 
     <link rel="icon" href="./superEasyLogo.png" type="image/png"> 
     <script type="module" src="JS/main.js"></script>
-    
+    <script src="https://kit.fontawesome.com/45a97ed96e.js" crossorigin="anonymous"></script>
     <title>PainlessSUPER!</title>
   </head>
   <header>
@@ -58,11 +58,16 @@
           <div class="relative__container clearfix">
 
             <div class="track__message hidden">
-              <h2>Scrollea a la derecha para ver nuestras opciones</h2>
+              <div class="message">
+                <h2>Scrollea a la izquierda para ver nuestras opciones</h2>
+              </div>
+              <div class="icon">
+                <i class="pointer fa-solid fa-arrow-pointer" style="color: #ffffff;"></i>
+              </div>
             </div>
           </div>
-    <div class="welcome__carrousel clearfix">
-      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <div class="welcome__carrousel clearfix" draggable="false">
+      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0" draggable="false">
         
         <img class="img" src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Walmart.png" alt="" draggable="false">
         <img class="img" src="./img/laComer-removebg-preview (1).png" alt="" draggable="false">

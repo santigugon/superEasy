@@ -488,7 +488,7 @@ app.listen(port, () => {
 
 //127.0.0.1:3000
 // searchItem("sabritas");
-fetchwalmartProducts("queso");
+//fetchwalmartProducts("queso");
 // fetchlaComerProducts("cerveza");
 // fetchhebProducts("sabritas");
 
