@@ -3,6 +3,7 @@ export function headerSlider() {
   const right = document.getElementById("right-side");
   const initialtopDistance = left.getBoundingClientRect().top;
   const initialbottomDistance = left.getBoundingClientRect().bottom;
+  const trackMessage = document.querySelector(".track__message");
   window.onscroll = (e) => {
     const topDistance = left.getBoundingClientRect().top;
     console.log("original", initialbottomDistance, topDistance);
@@ -11,6 +12,10 @@ export function headerSlider() {
     let width = (topDistance / initialtopDistance) * 100;
     width = Math.max(width, 10);
     left.style.width = `${width < 15 ? width - 10 : width}%`;
+    if (width - 10 == 0) {
+      trackMessage.classList.remove("hidden");
+      trackMessage.classList.add("fade__down");
+    }
   };
 }
 

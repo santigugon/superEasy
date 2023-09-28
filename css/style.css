@@ -64,7 +64,8 @@ body {
 
 .welcome__image {
   margin-top: 15px;
-  width: 50%;
+  width: 50vw;
+  max-width: 50vw;
 }
 #left-side {
   background-color: var(--color-brand--1);
@@ -97,6 +98,39 @@ body {
   border: #2d34393e solid 1px;
   position: relative;
 }
+.relative__container {
+  height: 5vh;
+  position: relative;
+  overflow: visible;
+  background-color: #080000;
+  /* transform: translateY(50px); */
+}
+.track__message {
+  font-family: "Rubik", sans-serif;
+  font-size: 2vw;
+  color: #ffffff;
+  display: flex;
+  gap: 3vmin;
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  z-index: 999;
+}
+
+.fade__down {
+  animation: fadeDown 2s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .welcome__carrousel {
   height: 40vh;
   width: 100%;
@@ -119,6 +153,15 @@ body {
   top: 32%;
   transform: translate(0%, -50%);
   overflow: hidden;
+}
+.welcome__carrousel .track__message {
+  display: flex;
+  gap: 3vmin;
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translate(0%, -50%);
+  overflow: visible;
 }
 #image-track .img {
   width: 49vmin;
