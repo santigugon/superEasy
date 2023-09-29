@@ -252,6 +252,10 @@ body {
 .column:nth-child(even) {
   border-left: none;
 }
+.products__list {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 768px) {
   .column {
     border: 5px solid black;
@@ -260,9 +264,11 @@ body {
     flex-direction: column;
   }
   .column-container {
-    display: flex;
-    flex-direction: column;
     grid-template-columns: 1fr;
+  }
+  .products__list {
+    display: flex;
+    flex-direction: row;
   }
 }
 .column-container {
@@ -270,9 +276,7 @@ body {
 
   grid-template-rows: auto auto auto;
 }
-.products__list {
-  display: flex;
-}
+
 .product__container {
   padding-top: 15px;
   padding-bottom: 10px;

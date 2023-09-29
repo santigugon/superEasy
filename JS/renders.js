@@ -396,7 +396,7 @@ export const gridCreator = function (array) {
   let html = "";
   console.log("length del array ", array.length);
 
-  columnContainer.style.gridTemplateColumns = frColumns;
+  columnContainer.style.gridTemplateColumns = `repeat(${array.length},1fr)`;
 
   array.forEach((superMarket, index) => {
     console.log();
