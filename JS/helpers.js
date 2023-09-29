@@ -16,7 +16,6 @@ export const giveActualPrice = function (obj) {
       if (parseFloat(prices[i - 1]) > parseFloat(prices[i])) {
         prices[i - 1] = prices[i];
         prices[i] = prices[i - 1];
-        console.log("PRECIOS AQUI", prices);
       }
     }
   }

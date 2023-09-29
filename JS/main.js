@@ -55,6 +55,8 @@ let superMarketProducts = {
   chedraui: { products: [], cartProducts: [] },
   sams: { products: [], cartProducts: [] },
 };
+initialPageValues("walmart");
+superMarkets.forEach((spr) => initialPageValues(spr));
 
 const src = {
   heb: "https://1000marcas.net/wp-content/uploads/2022/04/HEB-Logo.png",
@@ -89,18 +91,6 @@ welcomeBtn.addEventListener("click", function (e) {
 
 carrouselSlider();
 headerSlider();
-// mouseSlide();
-// nextPageBtn.addEventListener("click", function (e) {
-//   nextPage(productListOne, products);
-//   e.preventDefault();
-// });
-
-// prevPageBtn.addEventListener("click", function (e) {
-//   console.log("S");
-
-//   previousPage(productListOne, products);
-//   e.preventDefault();
-// });
 
 const jamon = new Product(
   42.0,
@@ -145,11 +135,11 @@ superMarketGrid.addEventListener("click", function (e) {
 // EVENTLISTENERS
 // cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
 searchForm.addEventListener("submit", function (e) {
+  products = [];
   // window.location.href = "index.html";
   e.preventDefault();
   e.stopPropagation(); // Add this line to stop event propagation
 
-  console.log("QUE PASA");
   let trimmedSearch = searchInput.value.replace(/^[+\s+]+/, "");
   trimmedSearch = trimmedSearch.replace(/[+\s+]$/, "");
   console.log(trimmedSearch);
@@ -195,16 +185,11 @@ window.addEventListener("click", function (e) {
 let searchResults = async function (searchWord) {
   try {
     for (let i = 0; i < superMarkets.length; i++) {
-      console.log(`http://127.0.0.1:3000/${superMarkets[i]}/${searchWord}`);
-
       let response = await fetch(
         `http://127.0.0.1:3000/${superMarkets[i]}/${searchWord}`
       );
       let json = await response.json();
 
-      // console.log("EL JSON AQUI");
-      // console.log(json);
-      // console.log(products);
       json.forEach((product) => (product._quantity = "1"));
 
       products.push(json);
@@ -212,8 +197,11 @@ let searchResults = async function (searchWord) {
       // productListOne.innerHTML = "";
       console.log(products);
       initialPageValues(superMarkets[i]);
+      console.log("Debemos reiniciar ", superMarkets[i]);
+
       let productList = document.querySelector(`.products__li__${i + 1}`);
       productListRender(productList, products[i], false);
+
       console.log(products);
       console.log(superMarketProducts);
     }

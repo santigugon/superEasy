@@ -62,7 +62,7 @@ body {
   position: absolute;
 }
 
-.welcome__image {
+.welcome__img {
   margin-top: 15px;
   width: 50vw;
   max-width: 50vw;
@@ -198,7 +198,7 @@ body {
   left: 5px;
   /* bottom: 20px; */
   height: 15px;
-  z-index: 999;
+  z-index: 10;
 }
 @media (max-width: 768px) {
   .welcome__supermarket__container {
@@ -243,14 +243,35 @@ body {
   height: 10vh;
   min-height: 60px;
 }
+.column {
+  border: 5px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.column:nth-child(even) {
+  border-left: none;
+}
+@media (max-width: 768px) {
+  .column {
+    border: 5px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
 .column-container {
   display: grid;
 
   grid-template-rows: auto auto auto;
 }
-.column {
-  border: 5px solid black;
-  position: relative;
+.products__list {
+  display: flex;
 }
 .product__container {
   padding-top: 15px;
@@ -304,7 +325,7 @@ body {
   display: flex;
   width: 25%;
   max-width: 120px;
-  max-height: 100px;
+  max-height: 100vh;
   justify-content: center;
 }
 .logo__img {

@@ -18,8 +18,7 @@ export function headerSlider() {
     let width = (sideTopDistance / initialSideTopDistance) * 100;
     width = Math.max(width, 10);
     left.style.width = `${width < 15 ? width - 10 : width}%`;
-    console.log("ANCHO ", width);
-
+    
     if (width - 10 == 0) {
       trackMessage.classList.remove("hidden");
       trackMessage.classList.add("fade__down");
@@ -48,9 +47,7 @@ export function headerSlider() {
         pointerIcon.firstElementChild.classList.toggle("fa-hand-pointer");
       }
     }
-    // console.log(pointerIcon.children);
-
-    console.log("PERCENTAGE", percentage);
+    // Animacion del mouse hacia la izquierda
     pointerIcon.animate(
       { transform: `translateX(${percentage}%)` },
       { duration: 1200, fill: "forwards" }
