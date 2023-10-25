@@ -1030,7 +1030,9 @@ const productListRender = function(container, productsArr, cache) {
     let prevPageBtn = document.querySelector(`#${superMarket}__prev`);
     let tempCounterL = superMarketCharac[superMarket].counterL;
     let tempCounterP = superMarketCharac[superMarket].counterP;
-    let brandsSet = new Set(productsArr.map((product)=>product.brand.toUpperCase()));
+    let brandsSet = new Set(productsArr.map((product)=>{
+        if (product.brand) product.brand.toUpperCase();
+    }));
     console.log(brandsSet);
     if (!cache) {
         caches[superMarket].productsArr = productsArr;

@@ -218,7 +218,11 @@ export const productListRender = function (container, productsArr, cache) {
   let tempCounterL = superMarketCharac[superMarket].counterL;
   let tempCounterP = superMarketCharac[superMarket].counterP;
   let brandsSet = new Set(
-    productsArr.map((product) => product.brand.toUpperCase())
+    productsArr.map((product) => {
+      if (product.brand) {
+        product.brand.toUpperCase();
+      }
+    })
   );
   console.log(brandsSet);
 
